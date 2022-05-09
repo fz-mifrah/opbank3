@@ -1,0 +1,11 @@
+{
+  "opbankApp": {
+    "EtatOperation": {
+      "null": "",
+      "EnCours": "EnCours",
+      "Valide": "Valide",
+      "Annulee": "Annulee",
+      "Rejetee": "Rejetee"
+    }
+  }
+}

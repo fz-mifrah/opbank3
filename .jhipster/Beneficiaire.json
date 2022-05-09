@@ -1,0 +1,33 @@
+{
+  "applications": ["opbank"],
+  "changelogDate": "20220509233604",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "beneficiaire",
+  "fields": [
+    {
+      "fieldName": "nomPrenom",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "numCompte",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Beneficiaire",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "virement",
+      "otherEntityRelationshipName": "beneficiaire",
+      "relationshipName": "virement",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}
