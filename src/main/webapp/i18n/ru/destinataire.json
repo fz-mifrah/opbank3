@@ -1,0 +1,27 @@
+{
+  "opbankApp": {
+    "destinataire": {
+      "home": {
+        "title": "Destinataires",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Destinataire",
+        "createOrEditLabel": "Создать или отредактировать Destinataire",
+        "notFound": "Destinataires не найдено"
+      },
+      "created": "Новый Destinataire создан с идентификатором {{ param }}",
+      "updated": "Destinataire обновлен с идентификатором {{ param }}",
+      "deleted": "Destinataire удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Destinataire {{ id }}?"
+      },
+      "detail": {
+        "title": "Destinataire"
+      },
+      "id": "ID",
+      "nom": "Nom",
+      "prenom": "Prenom",
+      "rib": "Rib",
+      "virement": "Virement"
+    }
+  }
+}

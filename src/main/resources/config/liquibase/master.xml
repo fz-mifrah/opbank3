@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+    <property name="now" value="current_timestamp" dbms="postgresql"/>
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql, mariadb"/>
+    <property name="clobType" value="longvarchar" dbms="h2"/>
+    <property name="clobType" value="clob" dbms="mysql, oracle, mssql, mariadb, postgresql"/>
+    <property name="uuidType" value="uuid" dbms="h2, postgresql"/>
+    <property name="datetimeType" value="datetime(6)" dbms="mysql, mariadb"/>
+    <property name="datetimeType" value="datetime" dbms="oracle, mssql, postgresql, h2"/>
+
+    <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509233050_added_entity_Client.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509233150_added_entity_Compte.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509233250_added_entity_Banque.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509233350_added_entity_CarteBancaire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509233450_added_entity_Operation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509233550_added_entity_Virement.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509233650_added_entity_Beneficiaire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509233750_added_entity_Destinataire.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509233850_added_entity_Transfer.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509233950_added_entity_Recharge.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509234050_added_entity_Operateur.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509234150_added_entity_PaimentFacture.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509234250_added_entity_Service.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20220509233050_added_entity_constraints_Client.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509233150_added_entity_constraints_Compte.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509233450_added_entity_constraints_Operation.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509233550_added_entity_constraints_Virement.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509233950_added_entity_constraints_Recharge.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20220509234150_added_entity_constraints_PaimentFacture.xml" relativeToChangelogFile="false"/>
+    <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
+    <!-- jhipster-needle-liquibase-add-incremental-changelog - JHipster will add incremental liquibase changelogs here -->
+</databaseChangeLog>
