@@ -1,0 +1,59 @@
+{
+  "applications": ["opbank"],
+  "changelogDate": "20220509233104",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "compte",
+  "fields": [
+    {
+      "fieldName": "rib",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dateOuverture",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Compte",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "numCarte",
+      "otherEntityName": "carteBancaire",
+      "otherEntityRelationshipName": "compte",
+      "ownerSide": true,
+      "relationshipName": "carteBancaire",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "operation",
+      "otherEntityRelationshipName": "compte",
+      "relationshipName": "operation",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "nom",
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "compte",
+      "ownerSide": false,
+      "relationshipName": "client",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "banque",
+      "otherEntityRelationshipName": "compte",
+      "relationshipName": "banque",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

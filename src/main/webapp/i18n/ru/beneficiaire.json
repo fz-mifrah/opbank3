@@ -1,0 +1,26 @@
+{
+  "opbankApp": {
+    "beneficiaire": {
+      "home": {
+        "title": "Beneficiaires",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Beneficiaire",
+        "createOrEditLabel": "Создать или отредактировать Beneficiaire",
+        "notFound": "Beneficiaires не найдено"
+      },
+      "created": "Новый Beneficiaire создан с идентификатором {{ param }}",
+      "updated": "Beneficiaire обновлен с идентификатором {{ param }}",
+      "deleted": "Beneficiaire удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Beneficiaire {{ id }}?"
+      },
+      "detail": {
+        "title": "Beneficiaire"
+      },
+      "id": "ID",
+      "nomPrenom": "Nom Prenom",
+      "numCompte": "Num Compte",
+      "virement": "Virement"
+    }
+  }
+}
