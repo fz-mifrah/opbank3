@@ -1,0 +1,38 @@
+{
+  "applications": ["opbank"],
+  "changelogDate": "20220509233750",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "destinataire",
+  "fields": [
+    {
+      "fieldName": "nom",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "prenom",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "rib",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Destinataire",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "virement",
+      "otherEntityRelationshipName": "destinataire",
+      "relationshipName": "virement",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}
