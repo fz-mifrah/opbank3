@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Recharge.
+    -->
+    <changeSet id="20220509225255-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="recharge_id"
+                                 baseTableName="rel_recharge__operateur"
+                                 constraintName="fk_rel_recharge__operateur__recharge_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="recharge"/>
+
+        <addForeignKeyConstraint baseColumnNames="operateur_id"
+                                 baseTableName="rel_recharge__operateur"
+                                 constraintName="fk_rel_recharge__operateur__operateur_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="operateur"/>
+    </changeSet>
+</databaseChangeLog>

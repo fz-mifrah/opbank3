@@ -1,0 +1,25 @@
+{
+  "opbankApp": {
+    "facture": {
+      "home": {
+        "title": "Factures",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Facture",
+        "createOrEditLabel": "Создать или отредактировать Facture",
+        "notFound": "Factures не найдено"
+      },
+      "created": "Новый Facture создан с идентификатором {{ param }}",
+      "updated": "Facture обновлен с идентификатором {{ param }}",
+      "deleted": "Facture удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Facture {{ id }}?"
+      },
+      "detail": {
+        "title": "Facture"
+      },
+      "id": "ID",
+      "nom": "Nom",
+      "paimentFacture": "Paiment Facture"
+    }
+  }
+}

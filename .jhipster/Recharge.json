@@ -1,0 +1,37 @@
+{
+  "applications": ["opbank"],
+  "changelogDate": "20220509225255",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "recharge",
+  "fields": [
+    {
+      "fieldName": "numTel",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Recharge",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "nom",
+      "otherEntityName": "operateur",
+      "otherEntityRelationshipName": "recharge",
+      "ownerSide": true,
+      "relationshipName": "operateur",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "operation",
+      "otherEntityRelationshipName": "recharge",
+      "ownerSide": false,
+      "relationshipName": "operation",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

@@ -1,0 +1,27 @@
+{
+  "opbankApp": {
+    "destinataire": {
+      "home": {
+        "title": "Destinataires",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Destinataire",
+        "createOrEditLabel": "Creeare sau editare Destinataire",
+        "notFound": "No Destinataires found"
+      },
+      "created": "A fost creată o nouă entitate Destinataire cu identificatorul {{ param }}",
+      "updated": "Destinataire cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Destinataire cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Destinataire {{ id }}?"
+      },
+      "detail": {
+        "title": "Destinataire"
+      },
+      "id": "ID",
+      "nom": "Nom",
+      "prenom": "Prenom",
+      "rib": "Rib",
+      "virement": "Virement"
+    }
+  }
+}
