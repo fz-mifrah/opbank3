@@ -1,0 +1,38 @@
+{
+  "applications": ["opbank"],
+  "changelogDate": "20220509225155",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "transfer",
+  "fields": [
+    {
+      "fieldName": "cinDestinataireII",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "nomPrenomDestinataireII",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "telDestinataireII",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Transfer",
+  "pagination": "infinite-scroll",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "operation",
+      "otherEntityRelationshipName": "transfer",
+      "ownerSide": false,
+      "relationshipName": "operation",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

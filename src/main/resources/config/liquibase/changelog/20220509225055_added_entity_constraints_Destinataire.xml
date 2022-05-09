@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Destinataire.
+    -->
+    <changeSet id="20220509225055-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="virement_id"
+                                 baseTableName="destinataire"
+                                 constraintName="fk_destinataire__virement_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="virement"/>
+    </changeSet>
+</databaseChangeLog>

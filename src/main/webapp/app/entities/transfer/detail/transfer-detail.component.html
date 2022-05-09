@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="transfer">
+      <h2 data-cy="transferDetailsHeading"><span jhiTranslate="opbankApp.transfer.detail.title">Transfer</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ transfer.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="opbankApp.transfer.cinDestinataireII">Cin Destinataire II</span></dt>
+        <dd>
+          <span>{{ transfer.cinDestinataireII }}</span>
+        </dd>
+        <dt><span jhiTranslate="opbankApp.transfer.nomPrenomDestinataireII">Nom Prenom Destinataire II</span></dt>
+        <dd>
+          <span>{{ transfer.nomPrenomDestinataireII }}</span>
+        </dd>
+        <dt><span jhiTranslate="opbankApp.transfer.telDestinataireII">Tel Destinataire II</span></dt>
+        <dd>
+          <span>{{ transfer.telDestinataireII }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/transfer', transfer.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

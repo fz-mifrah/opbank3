@@ -1,0 +1,25 @@
+{
+  "opbankApp": {
+    "facture": {
+      "home": {
+        "title": "Factures",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Facture",
+        "createOrEditLabel": "Creeare sau editare Facture",
+        "notFound": "No Factures found"
+      },
+      "created": "A fost creată o nouă entitate Facture cu identificatorul {{ param }}",
+      "updated": "Facture cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Facture cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Facture {{ id }}?"
+      },
+      "detail": {
+        "title": "Facture"
+      },
+      "id": "ID",
+      "nom": "Nom",
+      "paimentFacture": "Paiment Facture"
+    }
+  }
+}
