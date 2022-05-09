@@ -1,0 +1,26 @@
+{
+  "opbankApp": {
+    "beneficiaire": {
+      "home": {
+        "title": "Beneficiaires",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Beneficiaire",
+        "createOrEditLabel": "Creeare sau editare Beneficiaire",
+        "notFound": "No Beneficiaires found"
+      },
+      "created": "A fost creată o nouă entitate Beneficiaire cu identificatorul {{ param }}",
+      "updated": "Beneficiaire cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Beneficiaire cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Beneficiaire {{ id }}?"
+      },
+      "detail": {
+        "title": "Beneficiaire"
+      },
+      "id": "ID",
+      "nomPrenom": "Nom Prenom",
+      "numCompte": "Num Compte",
+      "virement": "Virement"
+    }
+  }
+}

@@ -1,0 +1,104 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-transfer-heading" data-cy="TransferCreateUpdateHeading" jhiTranslate="opbankApp.transfer.home.createOrEditLabel">
+        Create or edit a Transfer
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="opbankApp.transfer.cinDestinataireII" for="field_cinDestinataireII"
+            >Cin Destinataire II</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="cinDestinataireII"
+            id="field_cinDestinataireII"
+            data-cy="cinDestinataireII"
+            formControlName="cinDestinataireII"
+          />
+          <div
+            *ngIf="
+              editForm.get('cinDestinataireII')!.invalid &&
+              (editForm.get('cinDestinataireII')!.dirty || editForm.get('cinDestinataireII')!.touched)
+            "
+          >
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('cinDestinataireII')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="opbankApp.transfer.nomPrenomDestinataireII" for="field_nomPrenomDestinataireII"
+            >Nom Prenom Destinataire II</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="nomPrenomDestinataireII"
+            id="field_nomPrenomDestinataireII"
+            data-cy="nomPrenomDestinataireII"
+            formControlName="nomPrenomDestinataireII"
+          />
+          <div
+            *ngIf="
+              editForm.get('nomPrenomDestinataireII')!.invalid &&
+              (editForm.get('nomPrenomDestinataireII')!.dirty || editForm.get('nomPrenomDestinataireII')!.touched)
+            "
+          >
+            <small
+              class="form-text text-danger"
+              *ngIf="editForm.get('nomPrenomDestinataireII')?.errors?.required"
+              jhiTranslate="entity.validation.required"
+            >
+              This field is required.
+            </small>
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="opbankApp.transfer.telDestinataireII" for="field_telDestinataireII"
+            >Tel Destinataire II</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="telDestinataireII"
+            id="field_telDestinataireII"
+            data-cy="telDestinataireII"
+            formControlName="telDestinataireII"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

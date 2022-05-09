@@ -1,0 +1,25 @@
+{
+  "opbankApp": {
+    "service": {
+      "home": {
+        "title": "Services",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Service",
+        "createOrEditLabel": "Создать или отредактировать Service",
+        "notFound": "Services не найдено"
+      },
+      "created": "Новый Service создан с идентификатором {{ param }}",
+      "updated": "Service обновлен с идентификатором {{ param }}",
+      "deleted": "Service удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Service {{ id }}?"
+      },
+      "detail": {
+        "title": "Service"
+      },
+      "id": "ID",
+      "nomService": "Nom Service",
+      "paimentFacture": "Paiment Facture"
+    }
+  }
+}
